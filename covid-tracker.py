@@ -12,7 +12,7 @@ def check_site(date):
         print("No sessions\n")
     else:
         for i in sessions:
-            if(i['available_capacity']!=0 or i['available_capacity_dose1']!=0):
+            if(i['available_capacity']!=0):
                 pb = Pushbullet("API Token Here")
                 dev = pb.get_device("Device Name Here")
                 tt = "Date: "+date+"\nName: "+i['name']+"\nPincode: "+str(i['pincode'])+"\nAva. Capacity: "+str(i['available_capacity'])+"\nAva. Dose 1: "+str(i['available_capacity_dose1'])+"\nAva. Dose 2: "+str(i['available_capacity_dose2'])
